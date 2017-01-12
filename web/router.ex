@@ -16,9 +16,17 @@ defmodule ChurchWebsite.Router do
   scope "/", ChurchWebsite do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    get     "/",        HomeController,     :index
+    get     "/login",   SessionController,  :new
+    post    "/login",   SessionController,  :create
+    delete  "/logout",  SessionController,  :delete
+
+
     get "/hello", HelloController, :index
     get "/hello/:messenger", HelloController, :show
+    get "/register", UserController, :new
+
+    resources "/users", UserController
   end
 
   # Other scopes may use custom stacks.
