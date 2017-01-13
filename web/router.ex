@@ -17,14 +17,18 @@ defmodule ChurchWebsite.Router do
     pipe_through :browser # Use the default browser stack
 
     get     "/",        HomeController,     :index
+
     get     "/login",   SessionController,  :new
-    post    "/login",   SessionController,  :create
+    post    "/login",   SessionController,  :login
+
     delete  "/logout",  SessionController,  :delete
+
+    get     "/register",RegisterController, :new
+    post    "/register",RegisterController, :create
 
 
     get "/hello", HelloController, :index
     get "/hello/:messenger", HelloController, :show
-    get "/register", UserController, :new
 
     resources "/users", UserController
   end

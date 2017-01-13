@@ -23,10 +23,6 @@ defmodule ChurchWebsite.Session do
       if id, do: ChurchWebsite.Repo.get(User, id)
     end
 
-    def current_permissions(conn) do
-      permissions = Plug.Conn.get_session(conn,:permissions)
-    end
-
     def logged_in?(conn), do: !!current_user(conn)
 
   end

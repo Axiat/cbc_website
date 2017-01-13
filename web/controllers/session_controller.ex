@@ -7,7 +7,7 @@ defmodule ChurchWebsite.SessionController do
   end
 
 
-  def create(conn, %{"session" => session_params}) do
+  def login(conn, %{"session" => session_params}) do
     case ChurchWebsite.Session.login(session_params, ChurchWebsite.Repo) do
       {:ok, user} ->
         conn

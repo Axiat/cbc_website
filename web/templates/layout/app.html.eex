@@ -31,7 +31,7 @@
           <li><%= link "Logout", to: session_path(@conn, :delete), method: :delete %></li>
         <% else %>
           <li><%= link "Login",    to: "/login" %></li>
-          <li><%= link "Register", to: user_path(@conn, :new) %></li>
+          <li><%= link "Register", to: register_path(@conn, :new) %></li>
         <% end %>
 
 
