@@ -1,1 +1,143 @@
 /* This file is for your main application css. */
+
+
+											/* Logo */
+
+.mylogo{
+	width: 60%;
+}
+
+
+
+
+										/* navigation bar */
+
+.mynav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.mynav li {
+    float: left;
+}
+
+.mynav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.mynav li a:hover {
+    background-color: #111;
+}
+
+.active {
+	background: #051bbc;
+}
+
+
+
+
+
+												/* structure */
+
+.column {
+	width: 33%
+	float: left;
+}
+
+
+
+											/* Prayer Request CSS */
+
+.prayer_request .name {
+	font-size: 15pt;
+	font-weight: bold;
+}
+
+.prayer_request .content {
+	text-indent: 10%;	
+}
+
+.prayer_request .date {
+	font-style: italic;
+	font-size: 10pt;
+	margin-bottom: 5%;
+}
+
+.prayer_request {
+	margin: 10px;
+	min-width: 200px;
+	padding: 5%;
+
+
+	border: 1px solid grey;
+	border-radius: 5px;
+	box-shadow: 7px 7px 10px #888888;
+}
+
+.request_container{
+	width: 60%;
+	margin: auto;
+
+}
+
+
+
+												/*   Automatic SlideShow   */
+
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 10.0s;
+  animation-name: fade;
+  animation-duration: 2.0s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+

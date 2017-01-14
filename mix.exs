@@ -39,6 +39,7 @@ defmodule ChurchWebsite.Mixfile do
      {:gettext, "~> 0.11"},
         {:comeonin, "~> 1.0"},
         {:joken, "~> 1.1"},
+        {:timex, github: "bitwalker/timex"},
      {:cowboy, "~> 1.0"}]
   end
 

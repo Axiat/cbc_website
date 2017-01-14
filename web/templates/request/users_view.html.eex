@@ -1,0 +1,15 @@
+
+
+<h1>Prayer Requests:</h1>
+
+<%= link "New request", to: request_path(@conn, :new) %>
+
+  <%= for request <- @requests do %>
+
+      <div class="prayer_request">
+        <div class="name"><%= request.last_name %>, <%= request.first_name %></div>
+        <div class="date"><%= request.date %></div>
+        <div class="content"><%= request.body %></div>
+      </div>
+
+  <% end %>

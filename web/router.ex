@@ -30,7 +30,11 @@ defmodule ChurchWebsite.Router do
     get "/hello", HelloController, :index
     get "/hello/:messenger", HelloController, :show
 
+    get "/prayer_requests", RequestController, :users_view
+
     resources "/users", UserController
+    resources "/requests", RequestController
+
   end
 
   # Other scopes may use custom stacks.
