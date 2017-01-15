@@ -1,0 +1,27 @@
+
+<div class="about_nav">
+		<ul>
+		  <li><a id="about_title" href="">About</a></li>
+		  <li><a href="/about">Beliefs</a></li>
+		  <li><a href="/history">History</a></li>
+		  <li><a href="/pastor">Pastor</a></li>
+		  <li id="about_current"><a href="/pastor_assistant">Pastor-Assistant</a></li>
+		</ul>
+</div>
+
+
+<div class="about_content">
+	<h2> Assistant Pastor </h2>
+
+	<p>
+	    <img id="assistant_family" src="images/assistant.jpg" align="right" alt="family" hspace="20" > 
+		Pastor Jacob Jones had the blessing of growing up in a Christian home with Pastor Mike Jones as his father.  He understood his need of salvation at the
+		age of twelve and accepted Jesus Christ as His personal Savior. God led him to Bob Jones University where he graduated in 2004. The Lord continued to guide in his life as he sought to follow God’s will and perfect plan. God has called Pastor Jake to minister with the Youth Group as well as the Choir/Music at Cornerstone Baptist Church.
+	</p>
+
+
+	<p>
+		Pastor Jake and his wife Lauren have four children: Grace, Abigail, Noah and Micah
+	</p>
+
+</div>

@@ -5,6 +5,8 @@
 
 .mylogo{
 	width: 60%;
+
+
 }
 
 
@@ -44,6 +46,66 @@
 
 
 
+
+
+
+								/*	About Page navigation	*/
+
+.about_nav{
+	margin-top: 5%;
+	float: left;
+	width: 25%;
+}
+.about_nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+
+.about_nav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+.about_nav li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.about_content{
+	float: left;
+	width: 70%;
+	padding-left: 5%;
+
+}
+
+#about_current{
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+#about_title{
+	font-weight: bold;
+	font-size: 1.6em;
+	color: #ac6d1c;
+}
+
+
+#assistant_family{
+	width: 30%;
+}
+
+
+
+
+
+
+
+
 												/* structure */
 
 .column {
@@ -67,13 +129,17 @@
 .prayer_request .date {
 	font-style: italic;
 	font-size: 10pt;
+	font-weight: normal;
 	margin-bottom: 5%;
 }
 
 .prayer_request {
-	margin: 10px;
+	margin: auto;
+	margin-bottom: 2%;
 	min-width: 200px;
+	max-width: 500px;
 	padding: 5%;
+	padding-bottom: 5%;
 
 
 	border: 1px solid grey;
@@ -82,8 +148,40 @@
 }
 
 .request_container{
-	width: 60%;
-	margin: auto;
+	margin-top: 5%;
+
+}
+
+.mybtn {
+  background: #3498db;
+  width: 170px;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 6px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.mybtn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+.delete_div{
+	float: right;
 
 }
 
@@ -140,4 +238,45 @@ body {font-family: Verdana,sans-serif;}
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
+
+
+
+
+
+
+/* Contact Page */
+
+
+.left-content {
+	float: left;
+	width: 55%;
+}
+
+.right-content-sidebar {
+	float: left;
+	width: 30%;
+	margin: 5%;
+}	
+
+.questions ul li{
+	color: blue;
+	font-weight: bold;
+	margin-top: 5%;
+	list-style-type: none;
+}
+
+.questions ul li ul li {
+	color: black;
+	font-weight: normal;
+}
+
+.sub {
+	width: 100%;
+}
+
+
+
+
+
+
 

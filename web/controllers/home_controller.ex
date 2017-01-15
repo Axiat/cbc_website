@@ -8,5 +8,10 @@ defmodule ChurchWebsite.HomeController do
         requests = Repo.all(Request)
         render(conn, "index.html", requests: requests)
      end
+
+
+     def about(conn, _params) do
+         render "about.html"
+     end
   
 end

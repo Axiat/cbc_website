@@ -32,6 +32,13 @@ defmodule ChurchWebsite.Router do
 
     get "/prayer_requests", RequestController, :users_view
 
+
+    get "/about", PageController, :about
+    get "/history", PageController, :history
+    get "/pastor", PageController, :pastor
+    get "/pastor_assistant", PageController, :pastor_assistant
+    get "/contact", PageController, :contact
+
     resources "/users", UserController
     resources "/requests", RequestController
 

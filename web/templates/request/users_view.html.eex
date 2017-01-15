@@ -1,15 +1,31 @@
 
 
 <h1>Prayer Requests:</h1>
+<!-- <%= link "New request", to: request_path(@conn, :new) %>
+ -->
+<a style="text-decoration: none;" href="/requests/new">
+	<div class="mybtn">New Request</div>
+</a>
 
-<%= link "New request", to: request_path(@conn, :new) %>
 
+<div class="request_container">
   <%= for request <- @requests do %>
 
       <div class="prayer_request">
-        <div class="name"><%= request.last_name %>, <%= request.first_name %></div>
-        <div class="date"><%= request.date %></div>
-        <div class="content"><%= request.body %></div>
+        <%= if request.user_id == current_user(@conn).id do %>
+	        <div class="delete_div">
+	        	<%= link "Edit", to: request_path(@conn, :edit, request), class: "btn btn-default btn-xm" %>
+	        </div>
+        <% end %>
+       
+        <div class="name"><%= request.last_name %>, <%= request.first_name %>  <div class="date"><%= request.date %></div></div>
+        <hr>
+    
+         <%= raw(request.body) %>
+
+
       </div>
 
   <% end %>
+
+</div>

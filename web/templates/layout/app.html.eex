@@ -7,6 +7,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+
+
     <title>Hello ChurchWebsite!</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
@@ -24,15 +26,12 @@
               <li><%= link "Register", to: register_path(@conn, :new) %></li>
             <% end %>
           </ul>
-            <img class="mylogo" src="images/CClogo.png">
+            <a><img class="mylogo" src="/images/CClogo.png"></a>
         </nav>
         <a href="/"></a>
       </header>
 
 
-
-
-<!-- <span class="logo"></span> -->
 
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
@@ -47,9 +46,8 @@
           <%= if logged_in?(@conn) do %>
                 <li><%= link "Prayer Requests",    to: request_path(@conn, :users_view) %></li>
           <% end %>
-          <li><a href="#news">News</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/about">About</a></li>
         </ul>
         </div>
 
