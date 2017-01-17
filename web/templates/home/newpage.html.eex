@@ -1,0 +1,98 @@
+
+
+
+
+
+<section class="module parallax parallax-1">
+  <div class="my-container">
+    <h1>To know Christ, to make Christ known</h1>
+  </div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<section class="module content">
+
+      <h2 class="my-container">Lorem Ipsum Dolor</h2>
+
+
+      <div class="my-container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consequuntur, nesciunt dicta, esse rem ducimus itaque quis. Adipisci ullam nam qui illum debitis sit ad in delectus, repudiandae non dolorum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit veritatis, facere aliquid itaque tempore consequatur nihil sint enim aliquam id saepe magnam totam repellat placeat a fugit nulla molestias voluptas.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta cum distinctio eum asperiores rem enim fugit eaque voluptas est laboriosam in repudiandae architecto placeat, illum atque quasi explicabo, culpa, molestias!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit voluptas, aperiam quae provident, recusandae rem quis. Ut quaerat, quasi iste voluptate et dolorem atque sed neque voluptates, molestias dolor enim!</p>
+
+      </div>
+    </section>
+
+
+
+    <section class="module content lightblue">
+
+        <h2 class="my-container">About Us</h2>
+
+      <div class="my-container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consequuntur, nesciunt dicta, esse rem ducimus itaque quis. Adipisci ullam nam qui illum debitis sit ad in delectus, repudiandae non dolorum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit veritatis, facere aliquid itaque tempore consequatur nihil sint enim aliquam id saepe magnam totam repellat placeat a fugit nulla molestias voluptas.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta cum distinctio eum asperiores rem enim fugit eaque voluptas est laboriosam in repudiandae architecto placeat, illum atque quasi explicabo, culpa, molestias!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit voluptas, aperiam quae provident, recusandae rem quis. Ut quaerat, quasi iste voluptate et dolorem atque sed neque voluptates, molestias dolor enim!</p>
+
+      </div>
+</section>
+
+
+<section id="contact" class="module content midnightblue">
+
+      <h2 class="my-container">Contact Us</h2>
+      <hr class="my-container">
+      <br></br>
+
+
+
+      <div class="my-container">
+        <div class="newspaper">
+
+
+          <h3>Services</h3>
+
+            <b>Sunday</b>
+
+            <ul>
+              <li> Sunday School: 9:45 A.M. </li>
+              <li> Morning Worship: 11:00 A.M. </li>
+              <li> Evening Worship: 6:00 P.M. </li>
+            </ul>
+
+            <b>Wenesday</b>
+            <ul>
+              <li> Prayer Meeting: 7:00 P.M. </li>
+            </ul>
+
+            
+
+            <p style="margin-bottom: 0;">Phone: <b style="color: #ac6d1c;">(860) 848-2438</b></p>
+            <p>Email: <b style="color: #ac6d1c;;">cbcmikejones@att.net</b></p>
+
+
+             <iframe frameborder="0" marginwidth="0" marginheight="0" border="0" style="border:0;margin:0;width:380px;height:350px; " src="http://www.google.com/uds/modules/elements/mapselement/iframe.html?maptype=roadmap&amp;latlng=41.476714%2C-72.164172&amp;mlatlng=41.476714%2C-72.164172&amp;maddress1=900%20Connecticut%20163&amp;maddress2=Oakdale%2C%20CT%2006370&amp;mtitle=Cornerstone%20Baptist%20Church&amp;element=true" scrolling="no" allowtransparency="true" style="float: left;"></iframe>
+
+
+          </div>
+        </div>
+
+
+
+
+      
+
+
+
+      
+</section>
+
+
+
+
+
+
+
+
+
+
+

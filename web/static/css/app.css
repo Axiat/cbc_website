@@ -1,5 +1,11 @@
 /* This file is for your main application css. */
 
+/* reset all margin and padding */
+html, body {
+  margin:0;
+  padding:0;
+}
+
 
 											/* Logo */
 
@@ -109,8 +115,26 @@
 												/* structure */
 
 .column {
-	width: 33%
+  max-width: 960px;
+  width: 80%;
 	float: left;
+}
+.custom{
+  margin: auto;
+  width: 50%;
+  clear: right;
+}
+
+
+.newspaper {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+    
+    margin: auto;
 }
 
 
@@ -273,6 +297,250 @@ body {font-family: Verdana,sans-serif;}
 .sub {
 	width: 100%;
 }
+
+
+
+
+
+                            /* Landing page css */
+
+
+
+/* nav css */
+
+
+
+.navigation {
+  position: fixed;
+  margin-top: 0;
+  height: 100%;
+  background: #0c3c60; /* midnight blue */
+  max-height: 100px;
+  padding: 1.2em;
+  width: 100%;
+  
+
+}
+
+.nav-links {
+  margin: auto;
+  width: 80%;
+  color: white;
+  max-width: 800px;
+}
+
+
+.nav-links .title {
+  padding-top: .6em;
+  font-size: 22px;
+  float: left;
+  margin-right: 20%;
+}
+
+.nav-links .links {
+
+}
+
+
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  clear: right;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.topnav li a:hover {background-color: #6ea4ca;}
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:830px) {
+  ul.topnav li{display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+  .nav-links .title {
+    margin-right: 10px;
+    font-size: 20px;
+    width: 40%;
+  }
+
+}
+
+@media screen and (max-width:800px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+    background: #333333;
+  }
+  ul.topnav li a:hover {background-color: #6ea4ca;}
+
+}
+
+
+@media screen and (max-width: 970px){
+  .nav-links .title {
+    margin-right: 5%;
+   
+  }
+
+  .my-container{
+    width: 100%;
+  }
+
+}
+
+
+
+/* ============================================================
+  FOOTER
+============================================================ */
+
+
+footer{
+  padding: 20px;
+  height: 5%;
+  max-height: 100px;
+  background: #1e1e1e;
+  color: white;
+  text-align: center;
+}
+
+
+/* effects css */
+
+/* ============================================================
+  BOX SIZING & CLEARFIX
+============================================================ */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.my-container{
+  max-width: 960px;
+  margin: auto;
+  width: 80%;
+  opacity: 0;
+}
+
+
+
+section.module:last-child {
+  margin-bottom: 0;
+}
+section.module h2 {
+  margin-bottom: 40px;
+  font-family: "Roboto Slab", serif;
+  font-size: 30px;
+}
+section.module p {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 300;
+}
+section.module p:last-child {
+  margin-bottom: 0;
+}
+section.module.content {
+  padding: 40px 0;
+}
+
+section.module.content.lightblue {
+  color: #0c3c60;
+  background: #d1e0eb;
+}
+section.module.content.midnightblue{
+  background: #0c3c60;
+  color: white;
+}
+section.module.parallax {
+  padding: 240px 0;
+  background-position: 0 0;
+}
+section.module.parallax h1 {
+  margin-top: 0;
+  margin-bottom: 10%;
+  color: #2C3539;
+  font-size: 38px;
+  line-height: 1;
+  font-weight: 400;
+  text-align: center;
+  text-shadow: 0 0 10px white;
+  font-family: "Roboto Slab", serif;
+}
+section.module.parallax-1 {
+  background-image: url("/images/mountain_range.jpg");
+}
+section.module.parallax-2 {
+  background-image: url("../img/demo/pattern2.png");
+}
+section.module.parallax-3 {
+  background-image: url("../img/demo/pattern3.png");
+}
+
+@media all and (min-width: 600px) {
+  section.module h2 {
+    font-size: 42px;
+  }
+  section.module p {
+    font-size: 20px;
+  }
+  section.module.parallax {
+    padding: 300px 0;
+  }
+  section.module.parallax h1 {
+    font-size: 45px;
+  }
+
+}
+@media all and (min-width: 960px) {
+  section.module.parallax h1 {
+    font-size: 60px;
+  }
+
+
+
+
+}
+
+
+
+
 
 
 

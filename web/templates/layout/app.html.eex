@@ -1,62 +1,52 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+	<head>
+		<link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+	</head>
+
+	
+	<nav class="navigation">
+		<div class="nav-links">
+			<div class="title">
+				Cornerstone <span style="color: #5397ae;">Baptist Church<span>
+			</div>
+			<div class="links">
+				<ul class="topnav" id="myTopnav">
+				  <li><a href="#home">Home</a></li>
+				  <li><a href="#news">News</a></li>
+				  <li><a href="#contact">Contact</a></li>
+				  <li><a href="#about">About</a></li>
+				  <li class="icon">
+				    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+				  </li>
+				</ul>
+			</div>
+
+			<script type="text/javascript">
+								function myFunction() {
+				    var x = document.getElementById("myTopnav");
+				    if (x.className === "topnav") {
+				        x.className += " responsive";
+				    } else {
+				        x.className = "topnav";
+				    }
+				}
+			</script>
+
+		</div>
+	</nav>
 
 
-
-    <title>Hello ChurchWebsite!</title>
-    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
-  </head>
-
-  <body>
-    <div class="container">
-      <header class="header">
-        <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
-             <%= if logged_in?(@conn) do %>
-              <li><%= current_user(@conn).email %></li>
-              <li> <%= link "Logout", to: session_path(@conn, :delete), method: :delete %></li>
-            <% else %>
-              <li><%= link "Login",    to: "/login" %></li>
-              <li><%= link "Register", to: register_path(@conn, :new) %></li>
-            <% end %>
-          </ul>
-            <a><img class="mylogo" src="/images/CClogo.png"></a>
-        </nav>
-        <a href="/"></a>
-      </header>
+	<body>
+			 <%= render @view_module, @view_template, assigns %>
+	</body>
 
 
+<footer>
+		<div>&copy; 2017, Cornerstone Baptist Church</div>
+	
+ </footer>
 
 
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-
-
-      
-
-        <div class="mynav">
-        <ul>
-          <li class="active"><a href="/">Home</a></li>
-          <%= if logged_in?(@conn) do %>
-                <li><%= link "Prayer Requests",    to: request_path(@conn, :users_view) %></li>
-          <% end %>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/about">About</a></li>
-        </ul>
-        </div>
-
-
-      <main role="main">
-        <%= render @view_module, @view_template, assigns %>
-      </main>
-
-    </div> <!-- /container -->
-    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
-  </body>
+ <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
 </html>

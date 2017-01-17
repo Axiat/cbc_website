@@ -13,5 +13,11 @@ defmodule ChurchWebsite.HomeController do
      def about(conn, _params) do
          render "about.html"
      end
+
+
+     def newpage(conn, _params) do
+
+       render conn, "newpage.html"
+     end
   
 end

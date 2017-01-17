@@ -17,6 +17,7 @@ defmodule ChurchWebsite.Router do
     pipe_through :browser # Use the default browser stack
 
     get     "/",        HomeController,     :index
+    get     "/newpage",    HomeController,  :newpage
 
     get     "/login",   SessionController,  :new
     post    "/login",   SessionController,  :login
