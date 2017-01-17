@@ -137,6 +137,11 @@ html, body {
     margin: auto;
 }
 
+@media screen and (max-width:600px) {
+  .newspaper{
+    column-count: 1;
+  }
+}
 
 
 											/* Prayer Request CSS */
@@ -261,6 +266,8 @@ body {font-family: Verdana,sans-serif;}
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
+
+
 }
 
 
@@ -375,7 +382,7 @@ ul.topnav li.icon {display: none;}
   }
   .nav-links .title {
     margin-right: 10px;
-    font-size: 20px;
+    font-size: 19px;
     width: 40%;
   }
 
@@ -526,6 +533,7 @@ section.module.parallax-3 {
   section.module.parallax h1 {
     font-size: 45px;
   }
+
 
 }
 @media all and (min-width: 960px) {
