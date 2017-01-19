@@ -1,0 +1,33 @@
+<h2>Listing Prayer Requests</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Date</th>
+      <th>Body</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for request <- @requests do %>
+    <tr>
+      <td><%= request.first_name %></td>
+      <td><%= request.last_name %></td>
+      <td><%= request.date %></td>
+      <td><%= request.body %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: request_path(@conn, :show, request), class: "btn btn-default btn-xs" %>
+
+
+        <%= link "Delete", to: request_path(@conn, :delete, request), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New request", to: request_path(@conn, :new) %>

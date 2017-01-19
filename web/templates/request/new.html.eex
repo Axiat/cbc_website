@@ -1,0 +1,5 @@
+
+<%= render "form.html", conn: @conn, changeset: @changeset,
+                        action: request_path(@conn, :create) %>
+
+<%= link "Back", to: request_path(@conn, :users_view), class:  "btn btn-default btn-xm"  %>

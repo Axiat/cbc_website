@@ -1,0 +1,28 @@
+<h2>Show request</h2>
+
+<ul>
+
+  <li>
+    <strong>First name:</strong>
+    <%= @request.first_name %>
+  </li>
+
+  <li>
+    <strong>Last name:</strong>
+    <%= @request.last_name %>
+  </li>
+
+  <li>
+    <strong>Date:</strong>
+    <%= @request.date %>
+  </li>
+
+  <li>
+    <strong>Body:</strong>
+    <%= @request.body %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: request_path(@conn, :edit, @request) %>
+<%= link "Back", to: request_path(@conn, :index) %>
