@@ -1,14 +1,16 @@
 
 <div class="about_nav">
 		<ul>
-		  <li><a id="about_title" href="">About</a></li>
+		 <li class="about_section">About</a></li>
 		  <li><a href="/about">Beliefs</a></li>
 		  <li id="about_current"><a href="/history">History</a></li>
 		  <li><a href="/pastor">Pastor</a></li>
 		  <li><a href="/pastor_assistant">Pastor-Assistant</a></li>
 		</ul>
-		<img src="images/sign.jpg" vspace="30">
-</div>
+
+		<div class="pic-container">
+			<img src="images/sign.jpg" class="ministries-photos">
+		</div>
 
 
 <div class="about_content">

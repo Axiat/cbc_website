@@ -2,19 +2,21 @@
 <!DOCTYPE html>
 	<head>
 		<link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="<%= static_path(@conn, "/js/app.js") %>"></script>
 
-  	<script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<title>Cornerstone Baptist</title>
+
 	</head>
 
-	
+
 	<nav class="navigation">
 		<div class="nav-links">
-			
+
 			<div class="title" onclick="location.href='/'; " style="cursor: pointer;">
 				Cornerstone <span style="color: #5397ae;">Baptist Church<span>
 			</div>
-			
+
 			<div class="links" style="">
 				<ul class="topnav" id="myTopnav">
 				  <li class="icon">
@@ -24,17 +26,16 @@
 				  <li><a href="/ministries/children">Ministries</a></li>
 				  <li><a href="http://cbcmontvillect.blogspot.com/">Blog</a></li>
 
-				   <%= if logged_in?(@conn) do %>
-				  	<li><a href="/prayer_requests">Prayer Requests</a></li>
-				  <% end %>
-				  
+					  <%= if logged_in?(@conn) do %>
+					  	<li><a href="/prayer_requests">Prayer Requests</a></li>
+					  <% end %>
 				</ul>
-				
+
 			</div>
 
 		</div> <!-- end of nav links -->
 
-			<script type="text/javascript">
+		<script type="text/javascript">
 				function myFunction() {
 				    var x = document.getElementById("myTopnav");
 				    if (x.className === "topnav") {
@@ -43,45 +44,38 @@
 				        x.className = "topnav";
 				    }
 				}
-			</script>
+		</script>
 
 		<div class="login-logout">
 			<ul class="nav nav-pills ">
 	             <%= if logged_in?(@conn) do %>
-	              <div class="username">Welcome, 
-	              	<span><%= current_user(@conn).email %></span> 		
+	              <div class="username">Welcome,
+	              	<span><%= current_user(@conn).email %></span>
 	              </div>
-	              <li style="float: right;"> <%= link "Logout", to: session_path(@conn, :delete), method: :delete %></li>
+	              <li class="logout-button" style="float: right;"> <%= link "Logout", class: "btn btn-default btn-xm", to: session_path(@conn, :delete), method: :delete %></li>
 	            <% else %>
 	              <li><%= link "Login",    to: "/login" %></li>
 	              <li><%= link "Register", to: register_path(@conn, :new) %></li>
 	            <% end %>
-	      </ul>			
+	      </ul>
 		</div>
 
 	</nav><!-- end of navigation -->
 
 
 
-
-
-
 	<body>
-		<section class="module content">
-
-		  <div class="spacer"></div>
-		  
-		  <div class="my-container">
-		  		<p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      			<p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-
-				<%= render @view_module, @view_template, assigns %>
-		    </div>
-		</section>
+		<%= render @view_module, @view_template, assigns %>
 	</body>
 
 
 
+	<footer>
+        <div>&copy; 2017, Cornerstone Baptist Church</div>
+    </footer>
 
 
+
+
+ <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
 </html>

@@ -24,5 +24,18 @@ defmodule ChurchWebsite.PageController do
    end
 
 
+   def children(conn, _params) do
+      render conn, "children.html"
+   end
+
+   def teens(conn, _params) do
+     render conn, "teens.html"
+   end
+
+   def adults(conn, _params) do
+     render conn, "adults.html"
+   end
+
+
 
 end

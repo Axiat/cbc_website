@@ -1,7 +1,7 @@
 
 <div class="about_nav">
 		<ul>
-		  <li><a id="about_title" href="">About</a></li>
+		  <li class="about_section">About</a></li>
 		  <li><a href="/about">Beliefs</a></li>
 		  <li><a href="/history">History</a></li>
 		  <li id="about_current"><a href="/pastor">Pastor</a></li>
@@ -13,7 +13,7 @@
 <div class="about_content">
 	<h2>Pastor</h2>
 
-	<img src="images/pastor_family.jpg" align="right" hspace="10">
+	<img id="pastor-family" src="images/pastor_family.jpg" align="right" style="margin: 10px; ">
 	<p>
 		Pastor Mike Jones was born into a Catholic home in Pittsfield, Massachusetts. He joined the Navy in 1976 and was stationed in LaMaddelena, Italy.  It was during his tour of duty there that he received the Lord Jesus Christ as his own personal Savior from sin.
 	</p>

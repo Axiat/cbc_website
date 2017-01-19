@@ -1,0 +1,58 @@
+<div class="about_nav">
+		<ul>
+		  <li class="about_section">Ministries</a> </li>
+		  <li><a href="/ministries/children">Children</a></li>
+		  <li id="about_current"><a href="/ministries/teens">Teens</a></li>
+		  <li><a href="/ministries/adults">Adults</a></li>
+		</ul>
+
+		
+		<div class="pic-container">
+			<img src="/images/ministries/teens/play.jpg" class="ministries-photos teens">
+			<img src="/images/ministries/teens/choir.jpg" class="ministries-photos teens">
+			<img src="/images/ministries/teens/teen-challenge.jpg" class="ministries-photos teens">
+		</div>
+		
+</div>
+
+
+
+
+<div class="about_content">
+
+	<h2>Teens</h2>
+
+
+	<p>
+		We understand the pressures and pit-falls faced by teens in our culture.  We have developed a program to assist our teens and their parents in preparing our young people for service, and helping to protect them from falling prey to the wiles of the devil, or the allurements of the world.	
+	</p>
+
+	<ul class="bullet-points">
+
+		<li>
+		    We have a Sunday School class for teens in which our teens are taught through specific books of the Bible or Biblical topics where our intent is to promote their spiritual growth.  A major part of the teen class is our F.O.C.U.S. program (Faithfully Obeying Christ Unto Sanctification).  It is a program which encourages our teens in developing good habits in the area of Bible reading/study, church attendance, verse memorization, service in the church and service to others.
+		</li>
+
+		<li>
+			During the Sunday morning service, we have Children's Church for children 4-9 years old.  Our intent is to train children and prepare them to be able to effectively participate in the regular church services.
+		</li>
+
+
+		<li>
+			During our Wednesday evening service, we have our Master Clubs ministry for children from Kindergarten through sixth grade.  In Master Clubs, children are taught the Bible, play Bible-related games and earn badges for a variety of activities.
+		</li>
+
+		<li>
+			For children younger than 2 years old, we have a nursery during each service, staffed with trained, diligent workers.
+		</li>
+
+
+	</ul>
+
+		<div class="pic-container">
+			<img src="/images/ministries/teens/teens1.jpg" class="ministries-photos teens">
+			<img src="/images/ministries/teens/teens2.jpg" class="ministries-photos teens">
+		</div>
+
+</div>
+

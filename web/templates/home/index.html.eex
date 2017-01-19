@@ -1,59 +1,106 @@
 
-  
-
-<div class="slideshow-container">
-
-<div class="mySlides fade">
-  <img src="images/foundation.jpg" style="width:100%">
-</div>
-
-<div class="mySlides fade">
-  <img src="images/mystic.jpg" style="width:100%">
-</div>
-
-<div class="mySlides fade">
-  <img src="images/greychurch.jpg" style="width:100%">
-</div>
-
-<div class="mySlides fade">
-  <img src="images/sub.jpg" style="width:100%">
-</div>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span>
-</div>
 
 
-<div class="jumbotron">
-  <h2>Welcome to Cornerstone Baptist Church!</h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
-</div>
+
+<section class="module parallax parallax-1">
+  <div class="my-container">
+    <h1>To know Christ, to make Christ known</h1>
+  </div>
+</section>
+
+<section class="module content">
+
+      <h2 class="my-container">Welcome!</h2>
 
 
-<script>
-var slideIndex = 0;
-showSlides();
+      <div class="my-container">
 
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex> slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-</script>
+        <p>
+          We would like to take this opportunity to introduce you to Cornerstone Baptist Church.  We are an independent, Baptist church located in Oakdale, Connecticut ministering to the areas of Norwich, New London, Groton, Montville, Uncasville and Quaker Hill.
+        </p>
+
+        <p>
+          When you visit Cornerstone Baptist Church, you will find a very friendly group of people that are genuinely concerned about you and interested in you.  We, at Cornerstone, have found the God of the Bible to be faithful and true in all of His dealings with us.  We have found that He can and does meet our deepest needs, provide true joy, and give purpose to our lives.  We are part of the family of God who are blessed by His Word and each other's company.
+        </p>
+
+        <p>
+          If you're wanting to learn more about God and the eternal blessings and promises He has provided for you through His Son Jesus Christ, if you're wanting to strengthen your relationship to God, if you're wanting to find like-minded friends who will encourage and support you, then we invite you to come and fellowship with us at Cornerstone Baptist Church.
+        </p>
+
+
+
+
+      </div>
+    </section>
+
+
+
+    <section class="module content lightblue">
+
+        <h2 class="my-container">Connect With Us</h2>
+
+      <div class="my-container">
+
+        <div style="margin: auto; width: 80%;">
+          <img class="other-media" src="/images/main/facebook-logo.jpg" onclick="location.href='https://www.facebook.com/cornerstonebaptistct'; " style="cursor: pointer;">
+          <img class="other-media" src="/images/main/bridge-track.jpg" onclick="location.href='/images/main/bridge-tract.pdf'; " style="cursor: pointer;">
+          <img class="other-media" src="/images/main/sermons.jpg" onclick="location.href='http://www.cornerstone-baptist.org/sermons/'; " style="cursor: pointer;">
+        </div>
+
+        <span style="clear: left; display: block;"></span>
+      </div>
+</section>
+
+
+<section id="contact" class="module content midnightblue">
+
+      <h2 class="my-container">Contact Us</h2>
+      <hr class="my-container">
+      <br></br>
+
+
+
+      <div class="my-container">
+        <div class="newspaper">
+
+
+          <h3>Services</h3>
+
+            <b>Sunday</b>
+
+            <ul>
+              <li> Sunday School: 9:45 A.M. </li>
+              <li> Morning Worship: 11:00 A.M. </li>
+              <li> Evening Worship: 6:00 P.M. </li>
+            </ul>
+
+            <b>Wenesday</b>
+            <ul>
+              <li> Prayer Meeting: 7:00 P.M. </li>
+            </ul>
+
+            
+
+            <p style="margin-bottom: 0;">Phone: <b style="color: #ac6d1c;">(860) 848-2438</b></p>
+            <p>Email: <b style="color: #ac6d1c;;">cbcmikejones@att.net</b></p>
+
+
+             <iframe class="church-map" frameborder="0" marginwidth="0" marginheight="0" border="0"  " src="http://www.google.com/uds/modules/elements/mapselement/iframe.html?maptype=roadmap&amp;latlng=41.476714%2C-72.164172&amp;mlatlng=41.476714%2C-72.164172&amp;maddress1=900%20Connecticut%20163&amp;maddress2=Oakdale%2C%20CT%2006370&amp;mtitle=Cornerstone%20Baptist%20Church&amp;element=true" scrolling="no" allowtransparency="true" style="float: left;"></iframe>
+
+
+          </div>
+        </div>
+      
+</section>
+
+
+
+
+
+
+
+
+
+
+
+

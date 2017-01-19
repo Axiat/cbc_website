@@ -1,0 +1,52 @@
+
+
+
+<nav class="navigation">
+		<div class="nav-links">
+
+			<div class="title">
+				Cornerstone <span style="color: #5397ae;">Baptist Church<span>
+			</div>
+
+			<div class="links" style="">
+				<ul class="topnav" id="myTopnav">
+				  <li class="icon">
+				    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+				  </li>
+				  <li><a href="/">Home</a></li>
+				  <li><a href="#about">About</a></li>
+				   <%= if logged_in?(@conn) do %>
+				  	<li><a href="/prayer_requests">Prayer Requests</a></li>
+				  <% end %>
+
+				</ul>
+
+			</div>
+			<script type="text/javascript">
+				function myFunction() {
+				    var x = document.getElementById("myTopnav");
+				    if (x.className === "topnav") {
+				        x.className += " responsive";
+				    } else {
+				        x.className = "topnav";
+				    }
+				}
+			</script>
+
+		</div> <!-- end of nav links -->
+
+		<div class="login-logout">
+			<ul class="nav nav-pills ">
+	             <%= if logged_in?(@conn) do %>
+	              <div class="username">Welcome,
+	              	<span><%= current_user(@conn).email %></span>
+	              </div>
+	              <li style="float: right;"> <%= link "Logout", to: session_path(@conn, :delete), method: :delete %></li>
+	            <% else %>
+	              <li><%= link "Login",    to: "/login" %></li>
+	              <li><%= link "Register", to: register_path(@conn, :new) %></li>
+	            <% end %>
+	      </ul>
+		</div>
+
+	</nav><!-- end of navigation -->

@@ -1,0 +1,53 @@
+<div class="about_nav">
+		<ul>
+		  <li class="about_section">Ministries</a> </li>
+		  <li><a href="/ministries/children">Children</a></li>
+		  <li><a href="/ministries/teens">Teens</a></li>
+		  <li id="about_current"><a href="/ministries/adults">Adults</a></li>
+		</ul>
+		<div class="pic-container">
+			<img src="/images/ministries/adults/assembly.jpg" class="ministries-photos">
+			<img src="/images/ministries/adults/beavers-family.jpg" class="ministries-photos">
+			<img src="/images/ministries/adults/ladies.jpg" class="ministries-photos">
+		</div>
+</div>
+
+
+
+
+<div class="about_content">
+
+	<h2>Adults</h2>
+
+
+	<p>
+		At Cornerstone Baptist Church, we have many opportunities for adults to be "equipped" for service.	
+	</p>
+
+	<ul class="bullet-points">
+
+		<li>
+		   We have three adult Sunday School classes teaching through specific books in the Bible as well as a variety of Biblical topics.
+		</li>
+
+		<li>
+			We enjoy several times of fellowship throughout the year which include our Friendship Banquet, Missions Banquet, church picnics, and Sunday dinners-on-the-grounds.
+		</li>
+
+
+		<li>
+			For our men, we have a weekly Bible study and prayer time on Saturday evenings.  We also enjoy a quarterly Men's Prayer Breakfast.
+		</li>
+
+		<li>
+			For our ladies, we have a monthly missionary group meeting we call R.U.T.H. (Reaching Unto The Harvest), where they pray, have a Bible study, and prepare packages for our missionaries followed by a snack.  In May, our ladies get together for our Mother/Daughter banquet.
+		</li>
+
+		<li>
+			We have several outreach/evangelistic opportunities which include weekly "tract" visitation, neighborhood visitation, mailings, annual VBS, Teen Challenge and evangelistic meetings.
+		</li>
+
+	</ul>
+
+</div>
+

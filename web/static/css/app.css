@@ -1,9 +1,9 @@
 /* This file is for your main application css. */
 
 /* reset all margin and padding */
-html, body {
-  margin:0;
-  padding:0;
+*{
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -76,6 +76,14 @@ html, body {
     text-decoration: none;
 }
 
+.about_section {
+    display: block;
+    color: #ac6d1c;
+    padding: 8px 16px;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
 /* Change the link color on hover */
 .about_nav li a:hover {
     background-color: #555;
@@ -86,12 +94,17 @@ html, body {
 	float: left;
 	width: 70%;
 	padding-left: 5%;
-
+ 
+}
+.inner-content {
+   /*font-family: "Helvetica Neue", Helvetica,Arial,sans-serif;*/
+  font-size: 14px;
 }
 
 #about_current{
 	font-weight: bold;
 	font-size: 1.2em;
+  background: #a8a8a8;
 }
 
 #about_title{
@@ -101,9 +114,7 @@ html, body {
 }
 
 
-#assistant_family{
-	width: 30%;
-}
+
 
 
 
@@ -125,6 +136,16 @@ html, body {
   clear: right;
 }
 
+.spacer{
+  margin-bottom: 100px;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+
+}
+
 
 .newspaper {
     -webkit-column-count: 2; /* Chrome, Safari, Opera */
@@ -133,7 +154,6 @@ html, body {
     -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
     -moz-column-gap: 40px; /* Firefox */
     column-gap: 40px;
-    
     margin: auto;
 }
 
@@ -141,14 +161,63 @@ html, body {
   .newspaper{
     column-count: 1;
   }
-}
+  .module.content{
+    width: 100%;
+
+  }
+  .request-view h1{
+    display: none;
+
+  }
+  .request_container{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .hr-black{
+    display: none;
+  }
+
+  .about_content{
+    clear: left;
+    width: 100%;
+  }
+  .about_nav{
+    width: 100%;
+  }
+  .pic-container {
+    margin-left: 15%;
+    width: 100%;
+  }
+
+  #assistant_family{
+    width: 110px;
+  }
+
+  #pastor-family {
+    width: 280px;
+  }
+
+
+
+
+
+ }
 
 
 											/* Prayer Request CSS */
 
+.hr-black{
+  border-top: 1px solid black;
+}
+
 .prayer_request .name {
 	font-size: 15pt;
 	font-weight: bold;
+}
+
+.request-view{
+  margin: auto; width: 50%;
+
 }
 
 .prayer_request .content {
@@ -164,11 +233,12 @@ html, body {
 
 .prayer_request {
 	margin: auto;
-	margin-bottom: 2%;
+	margin-bottom: 20px;
 	min-width: 200px;
 	max-width: 500px;
-	padding: 5%;
-	padding-bottom: 5%;
+	padding: 20px;
+  background: white;
+
 
 
 	border: 1px solid grey;
@@ -178,6 +248,7 @@ html, body {
 
 .request_container{
 	margin-top: 5%;
+  background: #e2e3e6;
 
 }
 
@@ -330,24 +401,72 @@ body {font-family: Verdana,sans-serif;}
 }
 
 .nav-links {
-  margin: auto;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0; 
   width: 80%;
   color: white;
   max-width: 800px;
+
+/*  top: 20px;*/
 }
+
 
 
 .nav-links .title {
   padding-top: .6em;
   font-size: 22px;
   float: left;
-  margin-right: 20%;
+  margin-right: 10%;
 }
 
-.nav-links .links {
+.login-logout{
+ /* position: relative;
+  top: -100%;*/
+  float: right;
+}
+
+.logout-button{
+  float: right;
 
 }
 
+.nav.nav-pills a {
+  margin: 0;
+  color: #0c3c60;
+  position: relative;
+  top: -15px; /* this centers the login/register*/
+  background: white;
+
+  
+}
+
+.nav.nav-pills a:hover{
+  color: #0c3c60;
+}
+
+.username{
+  color: white;
+  position: relative;
+  top: -15px;
+  z-index: -1;
+}
+.username span{
+  color: #ac6d1c; 
+  font-weight: bold;
+}
+
+
+.other-media{
+  width: 30%;
+  height: 30%;
+  min-width: 200px;
+  max-width: 300px;
+  float: left;
+  margin: 10px;
+}
 
 
 ul.topnav {
@@ -382,13 +501,13 @@ ul.topnav li.icon {display: none;}
   }
   .nav-links .title {
     margin-right: 10px;
-    font-size: 19px;
-    width: 40%;
+    font-size: 18px;
+    width: 150px;
   }
 
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:850px) {
   ul.topnav.responsive {position: relative;}
   ul.topnav.responsive li.icon {
     position: absolute;
@@ -405,11 +524,14 @@ ul.topnav li.icon {display: none;}
     background: #333333;
   }
   ul.topnav li a:hover {background-color: #6ea4ca;}
+  .login-logout{
+    display: none;
+  }
 
 }
 
 
-@media screen and (max-width: 970px){
+@media screen and (max-width: 990px){
   .nav-links .title {
     margin-right: 5%;
    
@@ -419,6 +541,16 @@ ul.topnav li.icon {display: none;}
     width: 100%;
   }
 
+}
+
+
+
+.church-map{
+  border:0;
+  margin:0;
+  width:100%;
+  height: 350px;
+  
 }
 
 
@@ -435,6 +567,14 @@ footer{
   background: #1e1e1e;
   color: white;
   text-align: center;
+  bottom: 0px;
+}
+
+.custom-footer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 
@@ -462,7 +602,11 @@ footer{
   max-width: 960px;
   margin: auto;
   width: 80%;
-  opacity: 0;
+  /*opacity: 0;*/
+}
+
+.my-container.center{
+  max-width: 400px;
 }
 
 
@@ -479,6 +623,7 @@ section.module p {
   margin-bottom: 40px;
   font-size: 16px;
   font-weight: 300;
+
 }
 section.module p:last-child {
   margin-bottom: 0;
@@ -533,6 +678,7 @@ section.module.parallax-3 {
   section.module.parallax h1 {
     font-size: 45px;
   }
+  
 
 
 }
@@ -546,6 +692,24 @@ section.module.parallax-3 {
 
 }
 
+
+
+
+
+/*    Ministires     */
+
+.ministries-photos {
+  margin: 20px;
+}
+.ministries-photos.teens{
+  margin: 10px;
+  margin-left: 0;
+}
+
+.bullet-points {
+   font-size: 14pt; 
+   margin-left: 20px;
+}
 
 
 

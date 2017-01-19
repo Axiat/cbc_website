@@ -23,7 +23,7 @@ defmodule ChurchWebsite.RegisterController do
           {:error, changeset} ->
             conn
             |> put_flash(:info,"Unable to create account")
-            |> render(conn, "new.html", changeset: changeset)
+            |> render(conn, "new.html", changeset: changeset, params: user_params)
         end
       end
 
