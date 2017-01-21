@@ -21,11 +21,20 @@
 
   <%= hidden_input f, :user_id, class: "form-control" %>
 
-  <h2> New Prayer Request </h2>
+  
+
   <div class="form-group">
     <%= label f, :body, class: "control-label" %>
     <%= textarea f, :body, class: "form-control" %>
     <%= error_tag f, :body %>
+  </div>
+
+  <div class="form-group">
+    <div style="font-size: 22px;">
+    Is this an ongoing prayer request?
+    <%= checkbox f, :is_weekly %>
+    <%= error_tag f, :is_weekly %>
+    </div>
   </div>
 
   <div class="form-group">

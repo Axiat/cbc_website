@@ -1,6 +1,6 @@
 
 <div style="background: #e2e3e6;">
-    <section  class="module content">
+    <section  class="module content" style="overflow: hidden;">
 
           <div class="spacer"></div>
 
@@ -17,27 +17,61 @@
           </div >
 
 
-          <div class="request_container">
 
-            <%= for request <- @requests do %>
 
-                <div class="prayer_request">
-                  <%= if request.user_id == current_user(@conn).id or current_user(@conn).permissions == "admin" do %>
-                    <div class="delete_div">
-                      <%= link "Edit", to: request_path(@conn, :edit, request), class: "btn btn-default btn-xm" %>
+
+          <div class="request_container" >
+            
+
+                   <div class="prayer_request_column">
+
+                         <h3 class="column_title"> Prayer Requests: </h3>
+
+                            <%= for request <- @non_weekly_requests do %>
+
+                                <div class="prayer_request">
+                                  <%= if request.user_id == current_user(@conn).id or current_user(@conn).permissions == "admin" do %>
+                                    <div class="delete_div">
+                                      <%= link "Edit", to: request_path(@conn, :edit, request), class: "btn btn-default btn-xm" %>
+                                    </div>
+                                  <% end %>
+                                  <div class="name"><%=  request.last_name %>, <%=  request.first_name %>  <div class="date"><%= request.date %></div></div>
+                                  <hr>
+                              
+                                   <%= raw(request.body) %>
+                                </div>
+
+                            <% end %>
+
                     </div>
-                  <% end %>
-                 
-                  <div class="name"><%=  request.last_name %>, <%=  request.first_name %>  <div class="date"><%= request.date %></div></div>
-                  <hr>
-              
-                   <%= raw(request.body) %>
+                    
+                <div class="prayer_request_column" >
 
+                 <h3 class="column_title">  Ongoing Prayer Requests: </h3>
+                  
+                  <%= for request <- @weekly_requests do %>
+
+                          <div class="prayer_request">
+                            <%= if request.user_id == current_user(@conn).id or current_user(@conn).permissions == "admin" do %>
+                              <div class="delete_div">
+                                <%= link "Edit", to: request_path(@conn, :edit, request), class: "btn btn-default btn-xm" %>
+                              </div>
+                            <% end %>
+                            <div class="name"><%=  request.last_name %>, <%=  request.first_name %>  <div class="date"><%= request.date %></div></div>
+                            <hr>
+                        
+                             <%= raw(request.body) %>
+                          </div>
+
+                      <% end %>
 
                 </div>
 
-            <% end %>
+
           </div>
+
+
+         
 
 
 

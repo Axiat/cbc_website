@@ -7,6 +7,7 @@ defmodule ChurchWebsite.Request do
     field :date, :string
     field :body, :string
     field :user_id, :integer
+    field :is_weekly, :boolean, default: false
     timestamps()
   end
 
@@ -15,15 +16,21 @@ defmodule ChurchWebsite.Request do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:first_name, :last_name, :date, :user_id, :body])
+    |> cast(params, [:first_name, :last_name, :date, :user_id,:is_weekly, :body])
     |> validate_required([:body])
   end
 
   @doc """
   The function which is called to sort the prayer requests by last name
   """
-  def ordered(query) do
+  def ordered_non_weekly(query) do
     from t in query,
       order_by: t.last_name
+  end
+
+  def ordered_weekly(query) do
+    from t in query,
+        where: t.is_weekly == true,
+        order_by: t.last_name
   end
 end

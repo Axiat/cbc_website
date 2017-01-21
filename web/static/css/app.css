@@ -169,10 +169,7 @@ body{
     display: none;
 
   }
-  .request_container{
-    margin-left: 5%;
-    margin-right: 5%;
-  }
+ 
   .hr-black{
     display: none;
   }
@@ -200,6 +197,27 @@ body{
     width: 35%;
   }
 
+  .prayer_request_column {
+    clear: left;
+    
+  }
+  .request_container{
+    margin: auto;
+  }
+
+  .prayer_request {
+    width: 200%;
+  }
+
+
+  .column_title {
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 200%;
+  }
+
 
 
 
@@ -208,6 +226,11 @@ body{
 
 
 											/* Prayer Request CSS */
+
+.column_title {
+  text-align: center;
+}
+
 
 .hr-black{
   border-top: 1px solid black;
@@ -250,10 +273,15 @@ body{
 }
 
 .request_container{
-	margin-top: 5%;
-  background: #e2e3e6;
-
+  margin: auto; 
+  width: 70%;
+	
 }
+
+.prayer_request_column {
+  float: left; width: 50%;
+}
+
 
 .mybtn {
   background: #3498db;

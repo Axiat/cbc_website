@@ -19,8 +19,10 @@ defmodule ChurchWebsite.RequestController do
 
      if Session.access_requests(conn) do
 
-        requests = Request |> Request.ordered() |> Repo.all()
-        render(conn, "users_view.html", requests: requests,
+        non_weekly_requests = Request |> Request.ordered_non_weekly() |> Repo.all()
+        weekly_requests = Request |> Request.ordered_weekly() |> Repo.all()
+
+        render(conn, "users_view.html", non_weekly_requests: non_weekly_requests, weekly_requests: weekly_requests,
         layout: {ChurchWebsite.LayoutView, "main_page_layout.html"})
 
      else
