@@ -18,11 +18,11 @@ defmodule ChurchWebsite.User do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:name, :lastname ,:password, :email])
-    |> validate_required([:name, :lastname, :password, :email,]) # email is optional
+    |> cast(params, [:name, :lastname ,:password, :permissions, :email])
+    |> validate_required([:name, :lastname, :email,]) # email is optional
     |> validate_length(:password, min: 6)
-    |> validate_length(:name, min: 3)
-    |> validate_length(:lastname, min: 3)
+    |> validate_length(:name, min: 2)
+    |> validate_length(:lastname, min: 2)
     |> validate_format(:email, ~r/@/)
     |> unique_constraint(:email)
     |> hash_password

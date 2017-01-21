@@ -3,16 +3,18 @@ defmodule ChurchWebsite.HomeController do
 
   alias ChurchWebsite.Repo
   alias ChurchWebsite.Request
+  alias ChurchWebsite.Notifications
 
     def index(conn, _params) do
         requests = Repo.all(Request)
-        render(conn, "index.html", requests: requests,
-                layout: {ChurchWebsite.LayoutView, "main_page_layout.html"})
+        notifications = Repo.all(Notifications)
+
+        render(conn, "index.html",
+            requests: requests,
+            notifications: notifications,
+            user: ChurchWebsite.Session.current_user(conn),
+            layout: {ChurchWebsite.LayoutView, "main_page_layout.html"})
      end
 
-
-     def about(conn, _params) do
-         render "about.html"
-     end
   
 end

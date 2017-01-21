@@ -7,8 +7,36 @@
     <h1>To know Christ, to make Christ known</h1>
   </div>
 </section>
+      
+      <%= if Enum.count(@notifications) > 0 do %>
+        <div class="notifications"> 
+          <%= for notifications <- @notifications do %>
+   
+              <%= notifications.message %>
+
+
+              <%= if logged_in?(@conn) and is_admin(@conn) do %>
+                <div>
+                    <%= link "Edit", to: notifications_path(@conn, :edit, notifications), class: "btn btn-default btn-xs" %>
+                    <%= link "Delete", to: notifications_path(@conn, :delete, notifications), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+                </div>
+              <% end %>
+                
+      
+            <% end %>
+        </div>
+
+
+      <%= else %>
+
+      <div class="button-notification">
+          <%= link "create notification", to: notifications_path(@conn, :index), class: "btn btn-danger"%>
+      </div>
+
+      <% end %> 
 
 <section class="module content">
+
 
       <h2 class="my-container">Welcome!</h2>
 

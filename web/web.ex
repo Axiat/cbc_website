@@ -51,7 +51,7 @@ defmodule ChurchWebsite.Web do
       import ChurchWebsite.Router.Helpers
       import ChurchWebsite.ErrorHelpers
       import ChurchWebsite.Gettext
-      import ChurchWebsite.Session, only: [current_user: 1, logged_in?: 1]
+      import ChurchWebsite.Session, only: [current_user: 1, logged_in?: 1, access_requests: 1, is_admin: 1]
 
     end
   end

@@ -21,6 +21,8 @@ import "phoenix_html"
 // import socket from "./socket"
 
 
+import $ from "jquery"
+
 (function(){
 
   var parallax = document.querySelectorAll(".parallax"),

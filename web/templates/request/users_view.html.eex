@@ -4,7 +4,6 @@
 
           <div class="spacer"></div>
 
-
           <div class="request-view" >
               <h1>Prayer Requests:</h1>
               <!-- <%= link "New request", to: request_path(@conn, :new) %> -->
@@ -23,13 +22,13 @@
             <%= for request <- @requests do %>
 
                 <div class="prayer_request">
-                  <%= if request.user_id == current_user(@conn).id do %>
+                  <%= if request.user_id == current_user(@conn).id or current_user(@conn).permissions == "admin" do %>
                     <div class="delete_div">
                       <%= link "Edit", to: request_path(@conn, :edit, request), class: "btn btn-default btn-xm" %>
                     </div>
                   <% end %>
                  
-                  <div class="name"><%= request.last_name %>, <%= request.first_name %>  <div class="date"><%= request.date %></div></div>
+                  <div class="name"><%=  request.last_name %>, <%=  request.first_name %>  <div class="date"><%= request.date %></div></div>
                   <hr>
               
                    <%= raw(request.body) %>
@@ -39,6 +38,7 @@
 
             <% end %>
           </div>
+
 
 
     </section>

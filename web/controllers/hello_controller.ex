@@ -6,6 +6,9 @@ defmodule ChurchWebsite.HelloController do
   end
 
   def show(conn, %{"messenger" => messenger}) do
+    if messenger == "hello" do
+      render conn, "show.html", messenger: "blah"
+    end
     render conn, "show.html", messenger: messenger
   end
 

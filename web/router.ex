@@ -17,12 +17,12 @@ defmodule ChurchWebsite.Router do
     pipe_through :browser # Use the default browser stack
 
     get     "/",        HomeController,     :index
-    #get     "/newpage",    HomeController,  :newpage
 
     get     "/login",   SessionController,  :new
     post    "/login",   SessionController,  :login
-
     delete  "/logout",  SessionController,  :delete
+    get     "/change_password", SessionController, :display_reset_password
+    post    "/change_password", SessionController, :reset_password
 
     get     "/register",RegisterController, :new
     post    "/register",RegisterController, :create
@@ -32,6 +32,8 @@ defmodule ChurchWebsite.Router do
     get "/hello/:messenger", HelloController, :show
 
     get "/prayer_requests", RequestController, :users_view
+    get "/permissions/:input", RequestController, :permissions
+    get "/permissions",     RequestController, :show_permissions
 
 
     get "/about",   PageController, :about
@@ -43,10 +45,15 @@ defmodule ChurchWebsite.Router do
     get "/ministries/teens",    PageController,     :teens
     get "/ministries/adults",   PageController,     :adults
 
+    get "/user/show", UserController, :show
+    get "/user/edit", UserController, :edit
 
+    get "/users/all", UserController, :index;
 
     resources "/users", UserController
     resources "/requests", RequestController
+    resources "/notifications", NotificationsController
+
 
   end
 

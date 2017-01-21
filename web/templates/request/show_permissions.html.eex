@@ -1,0 +1,4 @@
+
+
+<%= render "permissions.html", changeset: @changeset,
+                        action: request_path(@conn, :permissions, @user) %>

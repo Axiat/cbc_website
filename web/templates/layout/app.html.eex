@@ -2,9 +2,7 @@
 <!DOCTYPE html>
 	<head>
 		<link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-
-  	<script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+  		<script src="<%= static_path(@conn, "/js/app.js") %>"></script>
 	</head>
 
 	
@@ -15,19 +13,38 @@
 				Cornerstone <span style="color: #5397ae;">Baptist Church<span>
 			</div>
 			
-			<div class="links" style="">
+			<div class="links">
 				<ul class="topnav" id="myTopnav">
 				  <li class="icon">
 				    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
 				  </li>
 				  <li><a href="/about">About</a></li>
 				  <li><a href="/ministries/children">Ministries</a></li>
-				  <li><a href="http://cbcmontvillect.blogspot.com/">Blog</a></li>
+
+					<%= if logged_in?(@conn) do %>
+				  		<%= if access_requests(@conn) do %>
+				  			<li><a href="/prayer_requests">Prayer Requests</a></li>
+				  		<%= else %>
+				  			<li><a href="/permissions">Prayer Requests</a></li>
+				  		<% end %>
+				  		<li><a href="<%= user_path(@conn, :show) %>">My Account</a></li>
+				    <% end %>
+
 
 				   <%= if logged_in?(@conn) do %>
-				  	<li><a href="/prayer_requests">Prayer Requests</a></li>
-				  <% end %>
-				  
+				   		<div class="mobile-login">
+						   	<li> 
+						   		<%= link "Logout", class: "btn btn-default btn-xm", to: session_path(@conn, :delete), method: :delete %>
+						   	</li>
+					   	</div>
+				   <%= else %>
+					    <div class="mobile-login">
+						    <li><%= link "Login",    to: "/login" %></li>
+			              	<li><%= link "Register", to: register_path(@conn, :new) %></li>
+		              	</div>
+	              	<% end %>
+
+
 				</ul>
 				
 			</div>
@@ -48,15 +65,15 @@
 		<div class="login-logout">
 			<ul class="nav nav-pills ">
 	             <%= if logged_in?(@conn) do %>
-	              <div class="username">Welcome, 
-	              	<span><%= current_user(@conn).email %></span> 		
+	              <div class="username">Welcome,
+	              	<span><%= current_user(@conn).email %></span>
 	              </div>
-	              <li style="float: right;"> <%= link "Logout", to: session_path(@conn, :delete), method: :delete %></li>
+	              <li class="logout-button" style="float: right;"> <%= link "Logout", class: "btn btn-default btn-xm", to: session_path(@conn, :delete), method: :delete %></li>
 	            <% else %>
 	              <li><%= link "Login",    to: "/login" %></li>
 	              <li><%= link "Register", to: register_path(@conn, :new) %></li>
 	            <% end %>
-	      </ul>			
+	      </ul>
 		</div>
 
 	</nav><!-- end of navigation -->

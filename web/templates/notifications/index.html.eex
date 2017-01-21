@@ -1,0 +1,26 @@
+<h2>Listing notifications</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Message</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for notifications <- @notifications do %>
+    <tr>
+      <td><%= notifications.message %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: notifications_path(@conn, :show, notifications), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: notifications_path(@conn, :edit, notifications), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: notifications_path(@conn, :delete, notifications), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New notifications", to: notifications_path(@conn, :new) %>

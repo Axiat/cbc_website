@@ -3,6 +3,9 @@ defmodule ChurchWebsite.RequestController do
   use Timex
 
   alias ChurchWebsite.Request
+  alias ChurchWebsite.Repo
+  alias ChurchWebsite.User
+  alias ChurchWebsite.Session
 
   def index(conn, _params) do
     requests = Repo.all(Request)
@@ -13,9 +16,18 @@ defmodule ChurchWebsite.RequestController do
       This function creates the default page where everyone can see prayer requests
   """
   def users_view(conn, _params) do
-    requests = Request |> Request.ordered() |> Repo.all()
-    render(conn, "users_view.html", requests: requests,
-    layout: {ChurchWebsite.LayoutView, "main_page_layout.html"})
+
+     if Session.access_requests(conn) do
+
+        requests = Request |> Request.ordered() |> Repo.all()
+        render(conn, "users_view.html", requests: requests,
+        layout: {ChurchWebsite.LayoutView, "main_page_layout.html"})
+
+     else
+        redirect(conn,to: home_path(conn, :index))
+
+     end
+
   end
 
   def new(conn, _params) do
@@ -54,7 +66,7 @@ defmodule ChurchWebsite.RequestController do
     changeset = Request.changeset(request, request_params)
 
     case Repo.update(changeset) do
-      {:ok, request} ->
+      {:ok, _ } ->
         conn
         |> put_flash(:info, "Request updated successfully.")
         |> redirect(to: "/prayer_requests")
@@ -74,5 +86,44 @@ defmodule ChurchWebsite.RequestController do
     |> put_flash(:info, "Request deleted successfully.")
     |> redirect(to: request_path(conn, :users_view))
   end
+
+
+    def show_permissions(conn, _params ) do
+        user = ChurchWebsite.Session.current_user(conn)
+        changeset = User.changeset(user)
+        render conn, "show_permissions.html", user: user, changeset: changeset
+    end
+
+
+
+    def permissions(conn, %{"input" => input} = _params) do
+        case input do
+            "pastor" -> update_permissions(conn,"admin")
+            "person" -> update_permissions(conn,"level 1")
+             _  ->   render conn, "permissions.html"
+        end
+   end
+
+
+
+   def update_permissions(conn, permission) do
+
+      id = Plug.Conn.get_session(conn,:current_user)
+      user = Repo.get!(User,id)
+      user_params = %{permissions: permission}
+      changeset = User.changeset(user, user_params)
+
+      case Repo.update(changeset) do
+        {:ok, _ } ->
+          conn
+          |> put_flash(:info, "Permissions updated successfully.")
+          |> redirect(to: request_path(conn, :users_view))
+        {:error, _ } ->
+            render(conn, "permissions.html")
+      end
+
+   end
+
+
 
 end

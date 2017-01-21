@@ -1,0 +1,6 @@
+<h2>New notifications</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: notifications_path(@conn, :create) %>
+
+<%= link "Back", to: notifications_path(@conn, :index), class: "btn btn-default" %>

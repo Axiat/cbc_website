@@ -9,26 +9,28 @@ defmodule ChurchWebsite.UserController do
   end
 
 
-  def show(conn, %{"id" => id}) do
-    user = Repo.get!(User, id)
+  def show(conn, _params) do
+    #user = Repo.get!(User, id)
+    user = ChurchWebsite.Session.current_user(conn)
     render(conn, "show.html", user: user)
   end
 
-  def edit(conn, %{"id" => id}) do
-    user = Repo.get!(User, id)
+  def edit(conn, _params) do
+    #user = Repo.get!(User, id)
+    user = ChurchWebsite.Session.current_user(conn)
     changeset = User.changeset(user)
     render(conn, "edit.html", user: user, changeset: changeset)
   end
 
   def update(conn, %{"id" => id, "user" => user_params}) do
-    user = Repo.get!(User, id)
+    user = Repo.get!(User,id)
     changeset = User.changeset(user, user_params)
 
     case Repo.update(changeset) do
-      {:ok, user} ->
+      {:ok, _} ->
         conn
         |> put_flash(:info, "User updated successfully.")
-        |> redirect(to: user_path(conn, :show, user))
+        |> redirect(to: user_path(conn, :show))
       {:error, changeset} ->
         render(conn, "edit.html", user: user, changeset: changeset)
     end
@@ -46,7 +48,4 @@ defmodule ChurchWebsite.UserController do
     |> redirect(to: user_path(conn, :index))
   end
 
-  def go_home(conn) do
-
-  end
 end

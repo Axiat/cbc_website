@@ -1,0 +1,13 @@
+<h2>Show notifications</h2>
+
+<ul>
+
+  <li>
+    <strong>Message:</strong>
+    <%= @notifications.message %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: notifications_path(@conn, :edit, @notifications) %>
+<%= link "Back", to: notifications_path(@conn, :index) %>

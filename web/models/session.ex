@@ -25,4 +25,21 @@ defmodule ChurchWebsite.Session do
 
     def logged_in?(conn), do: !!current_user(conn)
 
+
+    def access_requests(conn) do
+      user = current_user(conn)
+      case user.permissions do
+        nil -> false
+        _ -> true
+      end
+    end
+
+    def is_admin(conn) do
+      user = current_user(conn)
+      case user.permissions do
+        "admin" -> true
+         _ -> false
+      end
+    end
+
   end
