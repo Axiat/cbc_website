@@ -3,6 +3,8 @@
 	<head>
 		<link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   		<script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+  		<script type="text/javascript" src="/js/sweetalert.min.js" ></script>
+		<link rel="stylesheet" type="text/css" href="/js/sweetalert.css">
   		<title>Cornerstone Baptist</title>
 
 	</head>
@@ -53,17 +55,35 @@
 			</div>
 
 		</div> <!-- end of nav links -->
-
 		<script type="text/javascript">
-			function myFunction() {
-			    var x = document.getElementById("myTopnav");
-			    if (x.className === "topnav") {
-			        x.className += " responsive";
-			    } else {
-			        x.className = "topnav";
-			    }
-			}
-		</script>
+				function myFunction() {
+				    var x = document.getElementById("myTopnav");
+				    if (x.className === "topnav") {
+				        x.className += " responsive";
+				    } else {
+				        x.className = "topnav";
+				    }
+				}
+
+				function createPopup(){
+					
+					swal(
+							{   
+								title: "Under Construction",   
+								text: "Sermons are still available on our old website, click 'ok' to view them.",   
+								type: "info",   
+								showCancelButton: true,   
+								closeOnConfirm: true,   
+							}, 
+								function(){   
+									window.location.href = "http://www.cornerstone-baptist.org/sermons/" 
+
+								}
+						);
+
+				}
+
+			</script>
 
 		<div class="login-logout">
 			<ul class="nav nav-pills ">

@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 	<head>
 		<link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+		<script type="text/javascript" src="/js/sweetalert.min.js" ></script>
+		<link rel="stylesheet" type="text/css" href="/js/sweetalert.css">
  		<title>Cornerstone Baptist</title>
 
 	</head>
@@ -21,7 +23,7 @@
 				  </li>
 				  <li><a href="/about">About</a></li>
 				  <li><a href="/ministries/children">Ministries</a></li>
-				  <li><a href="http://www.cornerstone-baptist.org/sermons/">Sermons</a></li>
+				  <li><a href="#" onclick="createPopup();">Sermons</a></li>
 				 	<%= if logged_in?(@conn) do %>
 				  		<%= if access_requests(@conn) do %>
 				  			<li><a href="/prayer_requests">Prayer Requests</a></li>
@@ -61,6 +63,25 @@
 			        x.className = "topnav";
 			    }
 			}
+
+			function createPopup(){
+				
+				swal(
+						{   
+							title: "Under Construction",   
+							text: "Sermons are still available on our old website, click 'ok' to view them.",   
+							type: "info",   
+							showCancelButton: true,   
+							closeOnConfirm: true,   
+						}, 
+							function(){   
+								window.location.href = "http://www.cornerstone-baptist.org/sermons/" 
+
+							}
+					);
+
+			}
+
 		</script>
 
 		<div class="login-logout">
