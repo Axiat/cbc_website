@@ -46,7 +46,8 @@ defmodule ChurchWebsite.Router do
     get "/ministries/adults",   PageController,     :adults
 
     get "/user/show", UserController, :show
-    get "/user/edit", UserController, :edit
+    #get "/user/edit", UserController, :edit
+#    get "/admin/edit", UserController, :admin_edit
 
     get "/users/all", UserController, :index;
 

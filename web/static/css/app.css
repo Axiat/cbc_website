@@ -194,12 +194,11 @@ body{
     width: 280px;
   }
   .title {
-    width: 35%;
+    width: 150px;
   }
 
   .prayer_request_column {
     clear: left;
-    
   }
   .request_container{
     margin: auto;
@@ -207,6 +206,7 @@ body{
 
   .prayer_request {
     width: 200%;
+
   }
 
 
@@ -217,8 +217,6 @@ body{
     margin-bottom: 10px;
     width: 200%;
   }
-
-
 
 
 
@@ -272,14 +270,20 @@ body{
 	box-shadow: 7px 7px 10px #888888;
 }
 
+.prayer_request.urgent {
+  border: 5px solid red;
+}
+
+
 .request_container{
   margin: auto; 
-  width: 70%;
+  width: 95%;
 	
 }
 
 .prayer_request_column {
-  float: left; width: 50%;
+  float: left; 
+  width: 50%;
 }
 
 
@@ -450,7 +454,7 @@ body {font-family: Verdana,sans-serif;}
   right: 0; 
   width: 80%;
   color: white;
-  max-width: 850px;
+  max-width: 900px;
 
 /*  top: 20px;*/
 }
@@ -474,6 +478,8 @@ body {font-family: Verdana,sans-serif;}
 
 }
 
+
+
 .mobile-login{
   display: none;
 }
@@ -487,6 +493,18 @@ body {font-family: Verdana,sans-serif;}
 
   
 }
+
+
+.nav.nav-pills .logout-button a {
+  margin: 0;
+  color: #0c3c60;
+  position: relative;
+  top: -15px; /* this centers the login/register*/
+/*  background: white;
+*/
+  
+}
+
 
 .nav.nav-pills a:hover{
   color: #0c3c60;
@@ -533,7 +551,7 @@ ul.topnav li a {
   display: inline-block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 10px 12px;
   text-decoration: none;
   transition: 0.3s;
   font-size: 17px;
@@ -543,7 +561,7 @@ ul.topnav li a:hover {background-color: #6ea4ca;}
 
 ul.topnav li.icon {display: none;}
 
-@media screen and (max-width:1130px) {
+@media screen and (max-width:1350px) {
   ul.topnav li{display: none;}
   ul.topnav li.icon {
     float: right;
@@ -553,13 +571,14 @@ ul.topnav li.icon {display: none;}
     margin-right: 10px;
     font-size: 18px;
   }
+
   .mobile-login{
     display: block;
   }
 
 }
 
-@media screen and (max-width:1130px) {
+@media screen and (max-width:1350px) {
   ul.topnav.responsive {position: relative;}
   ul.topnav.responsive li.icon {
     position: absolute;
@@ -594,6 +613,20 @@ ul.topnav li.icon {display: none;}
   .my-container{
     width: 100%;
   }
+
+   .about_content{
+    clear: left;
+    width: 100%;
+  }
+  .about_nav {
+    width: 100%;
+  }
+
+  .pic-container {
+    margin-left: 15%;
+    width: 100%;
+  }
+ 
 
 }
 
@@ -680,7 +713,8 @@ section.module p {
 
 }
 section.module p:last-child {
-  margin-bottom: 0;
+  margin-bottom: 0;  margin-bottom: 0;
+
 }
 section.module.content {
   padding: 40px 0;
@@ -732,7 +766,6 @@ section.module.parallax-3 {
   section.module.parallax h1 {
     font-size: 45px;
   }
-  
 
 
 }
@@ -741,6 +774,7 @@ section.module.parallax-3 {
     font-size: 60px;
   }
 
+ 
 
 
 

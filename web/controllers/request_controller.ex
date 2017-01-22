@@ -7,9 +7,15 @@ defmodule ChurchWebsite.RequestController do
   alias ChurchWebsite.User
   alias ChurchWebsite.Session
 
+
   def index(conn, _params) do
-    requests = Repo.all(Request)
-    render(conn, "index.html", requests: requests)
+    if ChurchWebsite.Session.is_admin(conn) do
+        requests = Repo.all(Request)
+        render(conn, "index.html", requests: requests)
+    else
+        conn |> redirect(to: home_path(conn, :index))
+    end
+
   end
 
   @doc """
@@ -21,9 +27,12 @@ defmodule ChurchWebsite.RequestController do
 
         non_weekly_requests = Request |> Request.ordered_non_weekly() |> Repo.all()
         weekly_requests = Request |> Request.ordered_weekly() |> Repo.all()
+        urgent_requests = Request |> Request.urgent_requests() |> Repo.all()
 
-        render(conn, "users_view.html", non_weekly_requests: non_weekly_requests, weekly_requests: weekly_requests,
-        layout: {ChurchWebsite.LayoutView, "main_page_layout.html"})
+        render(conn, "users_view.html", non_weekly_requests: non_weekly_requests,
+                                        weekly_requests: weekly_requests,
+                                        urgent_requests: urgent_requests,
+                                        layout: {ChurchWebsite.LayoutView, "main_page_layout.html"})
 
      else
         redirect(conn,to: home_path(conn, :index))

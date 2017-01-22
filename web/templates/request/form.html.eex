@@ -31,9 +31,17 @@
 
   <div class="form-group">
     <div style="font-size: 22px;">
-    Is this an ongoing prayer request?
+    Is this an <b style="color: blue;">ongoing</b> prayer request?
     <%= checkbox f, :is_weekly %>
     <%= error_tag f, :is_weekly %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div style="font-size: 22px;">
+    Is this an <b style="color:red;">urgent</b> prayer request?
+    <%= checkbox f, :is_urgent %>
+    <%= error_tag f, :is_urgent %>
     </div>
   </div>
 

@@ -27,16 +27,6 @@
         </div>
 
 
-      <%= else %>
-
-            <%= if logged_in?(@conn) and is_admin(@conn) do %>
-
-              <div class="button-notification">
-                  <%= link "create notification", to: notifications_path(@conn, :index), class: "btn btn-danger"%>
-              </div>
-            
-            <% end %>
-
       <% end %> 
 
 <section class="module content">
@@ -125,11 +115,7 @@
       
 </section>
 
-
-
-
-
-
+<script src="<%= static_path(@conn, "/js/app.js") %>"></script>
 
 
 

@@ -24,6 +24,26 @@
             
 
                    <div class="prayer_request_column">
+                        <%=  if Enum.count(@urgent_requests) > 0 do %>
+                          <h3 class="column_title"> <b style="color: red;">Urgent Prayer Requests:</b> </h3>
+                            <%= for request <- @urgent_requests do %>
+
+
+                                <div class="prayer_request urgent">
+                                  <%= if request.user_id == current_user(@conn).id or current_user(@conn).permissions == "admin" do %>
+                                    <div class="delete_div">
+                                      <%= link "Edit", to: request_path(@conn, :edit, request), class: "btn btn-default btn-xm" %>
+                                    </div>
+                                  <% end %>
+                                  <div class="name"><%=  request.last_name %>, <%=  request.first_name %>  <div class="date"><%= request.date %></div></div>
+                                  <hr>
+                              
+                                   <%= raw(request.body) %>
+                                </div>
+
+
+                            <% end %>
+                        <% end %>
 
                          <h3 class="column_title"> Prayer Requests: </h3>
 

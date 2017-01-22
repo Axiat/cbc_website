@@ -2,8 +2,7 @@
 <!DOCTYPE html>
 	<head>
 		<link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
-		<script src="<%= static_path(@conn, "/js/app.js") %>"></script>
-		<title>Cornerstone Baptist</title>
+ 		<title>Cornerstone Baptist</title>
 
 	</head>
 
@@ -22,6 +21,7 @@
 				  </li>
 				  <li><a href="/about">About</a></li>
 				  <li><a href="/ministries/children">Ministries</a></li>
+				  <li><a href="http://www.cornerstone-baptist.org/sermons/">Sermons</a></li>
 				 	<%= if logged_in?(@conn) do %>
 				  		<%= if access_requests(@conn) do %>
 				  			<li><a href="/prayer_requests">Prayer Requests</a></li>
@@ -53,14 +53,14 @@
 		</div> <!-- end of nav links -->
 
 		<script type="text/javascript">
-				function myFunction() {
-				    var x = document.getElementById("myTopnav");
-				    if (x.className === "topnav") {
-				        x.className += " responsive";
-				    } else {
-				        x.className = "topnav";
-				    }
-				}
+			function myFunction() {
+			    var x = document.getElementById("myTopnav");
+			    if (x.className === "topnav") {
+			        x.className += " responsive";
+			    } else {
+			        x.className = "topnav";
+			    }
+			}
 		</script>
 
 		<div class="login-logout">

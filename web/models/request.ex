@@ -8,6 +8,8 @@ defmodule ChurchWebsite.Request do
     field :body, :string
     field :user_id, :integer
     field :is_weekly, :boolean, default: false
+    field :is_urgent, :boolean, default: false
+
     timestamps()
   end
 
@@ -16,7 +18,7 @@ defmodule ChurchWebsite.Request do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:first_name, :last_name, :date, :user_id,:is_weekly, :body])
+    |> cast(params, [:first_name, :last_name, :date, :user_id,:is_weekly, :is_urgent, :body])
     |> validate_required([:body])
   end
 
@@ -32,5 +34,10 @@ defmodule ChurchWebsite.Request do
     from t in query,
         where: t.is_weekly == true,
         order_by: t.last_name
+  end
+
+  def urgent_requests(query) do
+    from t in query,
+        where: t.is_urgent == true
   end
 end

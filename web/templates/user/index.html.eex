@@ -18,6 +18,8 @@
       <td><%= user.email %></td>
 
       <td class="text-right">
+        <%= link "Edit", to: user_path(@conn, :edit, user), class: "btn btn-default btn-xs" %>
+
         <%= link "Delete", to: user_path(@conn, :delete, user), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
       </td>
     </tr>
@@ -25,4 +27,4 @@
   </tbody>
 </table>
 
-<%= link "New user", to: user_path(@conn, :new) %>
+<%= link "New user", to: user_path(@conn, :new), class: "btn btn-default btn-xm" %>

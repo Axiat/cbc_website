@@ -2,47 +2,49 @@
 
 
 
+<div style="margin: auto; width: 80%;">
+    <div style="margin-bottom: 100px; font-size: 20px; ">
+      <h2>Show user</h2>
 
-<div style="margin-bottom: 100px;">
-  <h2>Show user</h2>
+      <ul style="list-style-type: none;">
 
-  <ul>
+        <li>
+          <strong>First Name:</strong>
+          <%= @user.name %>
+        </li>
 
-    <li>
-      <strong>First Name:</strong>
-      <%= @user.name %>
-    </li>
+        <li>
+            <strong>Last Name:</strong>
+            <%= @user.lastname %>
+          </li>
 
-    <li>
-        <strong>Last Name:</strong>
-        <%= @user.lastname %>
-      </li>
+        <li>
+          <strong>Email:</strong>
+          <%= @user.email %>
+        </li>
 
-    <li>
-      <strong>Email:</strong>
-      <%= @user.email %>
-    </li>
+      </ul>
 
-  </ul>
+      <%= link "Edit", to: user_path(@conn, :edit, @user), class: "btn btn-primary btn-xm" %>
+      <%= link "Back", to: home_path(@conn, :index), class: "btn btn-default btn-xm" %>
+    </div>
 
-  <%= link "Edit", to: user_path(@conn, :edit), class: "btn btn-primary btn-xm" %>
-  <%= link "Back", to: home_path(@conn, :index), class: "btn btn-default btn-xm" %>
+
+
+      
+      <%= if is_admin(@conn) do %>
+
+      <div >
+      <h2>Administer Links:</h2>
+
+        <ul style="list-style-type: none;">
+          <li style="margin-bottom: 20px; "><%= link "Manage Users", to: user_path(@conn, :index), class: "btn btn-default btn-xm" %></li>
+          <li style="margin-bottom: 20px;" ><%= link "Manage Notifications", to: notifications_path(@conn, :index), class: "btn btn-danger"%></li>
+
+        </ul>
+      </div>
+
+      <% end %>
+
 </div>
-
-
-
-  
-  <%= if is_admin(@conn) do %>
-
-  <div >
-  <h2>Administer Links:</h2>
-
-    <ul style="list-style-type: none;">
-      <li style="margin-bottom: 20px; "><%= link "Manage Users", to: user_path(@conn, :index), class: "btn btn-default btn-xm" %></li>
-      <li style="margin-bottom: 20px;" ><%= link "create notification", to: notifications_path(@conn, :index), class: "btn btn-danger"%></li>
-
-    </ul>
-  </div>
-
-  <% end %>
 
