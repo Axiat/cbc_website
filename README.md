@@ -1,4 +1,4 @@
-# ChurchWebsite
+# CBCWebsite
 
 To start your Phoenix app:
 
